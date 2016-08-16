@@ -1,100 +1,19 @@
 body {
     font-size: 16px;
     line-height: 22px;
+    font-family: "Roboto Medium", "Arial", sans-serif;
     color: #283136;
-    font-family: "Roboto medium";
 }
 
 h2 {
     font-size: 36px;
     line-height: 36px;
     color: #000000;
-    font-family: "Roboto medium";
-}
-
-.lead h2 {
-    font-size: 40px;
 }
 
 h3 {
     font-size: 16px;
     line-height: 22px;
-    font-family: "Roboto medium";
     text-transform: uppercase;
-}
-.services-list h3 {
-    font-size: 18px;
-    line-height: 30px;
-}
 
-.map h3 {
-    line-height: 30px;
-    font-family: "Roboto Regular medium"; 
-}
-
-legend {
-    font-size: 18px;
-    line-height: 30px;
-    color: #000000;
-}
-
-.item-1 {
-    background: url(../img/item-aviator.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-1:hover {
-    background-position: bottom center;
-}
-
-.item-2 {
-    background: url(../img/item-sunset.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-2:hover {
-    background-position: bottom center;
-}
-
-.item-3 {
-    background: url(../img/item-forte.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-3:hover {
-    background-position: bottom center;
-}
-
-.item-4 {
-    background: url(../img/item-thai.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-4:hover {
-    background-position: bottom center;
-}
-
-.item-5 {
-    background: url(../img/item-avenue.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-5:hover {
-    background-position: bottom center;
-}
-
-.item-6 {
-    background: url(../img/item-dovetail.jpg);
-    display: block;
-    width: 240px; 
-    height: 270px; 
-}
-.item-6:hover {
-    background-position: bottom center;
-}
 
