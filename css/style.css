@@ -23,29 +23,50 @@ h3 {
   width: 900px;
   margin: 0 auto;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .logo { 
     float: left;
-    width: 139px;
+    width: 140px;
+    margin-top: 25px;
 }
 
 .navigation-main {
       float: left;
-      width: 640px;
+      width: 580px;
+      padding-right: 70px;
+      margin-top: 48px;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: right;
+     
 }
 
 .navigation-main li {
       display: inline;
+      margin-right: 48px;
+      text-transform: uppercase;
+}
+
+.navigation-main li:last-child {
+      display: inline;
+      margin-right: 0px;
+      text-transform: uppercase;
 }
 
 .cart {
       float: right;
-      width: 100px;
+      width: 90px;
+      margin-top: 62px;
+      font-size: 14px;
+      line-height: 30px;
+      text-transform: uppercase;
 }
 
+}
 .header-top {
-    margin-bottom: 54px;
+    margin-bottom: 45px; 
 }
 
 .clearfix:after {
@@ -56,10 +77,20 @@ h3 {
 
 .demo-left {
     float: left;
-    width: 362px;
+    width: 540px; 
 }
-.header-bottom img {
+
+.slider-pagination {
+    float:right;
+}
+.slider-pagination li {
+    text-align: center;
+    display: inline; 
+}
+
+.slider-pic {
     float: right;
+    width:340px;
     
 }
 .main-header {
@@ -73,7 +104,7 @@ h3 {
     margin-right: 80px;
 }
 
-.service:last-child {
+.service:last-child {              /* можно каждому 3 обнулять марджин*/
     margin-right: 0;
 }
 
@@ -85,7 +116,6 @@ h3 {
 .description-left {
     float: left;
     width: 575px;
-    margin-right: 65px
 }
 
 .description-rigth {
@@ -115,17 +145,19 @@ h3 {
 }
 
 .map {
-    width: 1200px;
+    width: auto; 
     margin: 0 auto;
     background: url(../img/map.jpg);
     min-height: 418px;
+    background-position: 50% 50%; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .map .contacts {
     float: left;
-    width: 250px;
+    width: 229px;
     margin-top: 88px;
-    margin-left: 160px;
     padding-left: 21px;
     padding-top: 32px;
     padding-bottom: 27px;
@@ -140,6 +172,67 @@ h3 {
 }
 
 .discount {
+    width: 560px;
     float: right;
 }
 
+.lead {
+    width: 660px;
+    margin: 0 auto;
+    margin-bottom: 43px;
+    padding-top: 30px;
+    padding-bottom: 82px;
+    font-size: 40px;
+    line-height: 45px; /* высота в макете авто. не ясно как узнать*/
+    text-align: center;   
+}
+
+.item-choice {
+    float: left;
+    width: 240px;
+}
+
+.items-list {
+    float:right;
+    width: 640px;
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+
+.sorting: {
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sorting li {
+    display: inline;
+    margin-right: 39px;  /* ??????????????*/
+}
+
+.sorting li:nth-child(5) {
+    margin-right: 0px;
+}
+
+.item {
+    float:left;
+    width: 240px;
+    margin-bottom: 80px;
+}
+
+.item:nth-child(even) {
+    float:right;
+}
+
+.main-catalog {
+    margin-bottom: 80px;
+}
+
+.pagination {
+    float:left;
+    width: 400px;
+}
+
+.pagination li {
+    display: inline;
+}
