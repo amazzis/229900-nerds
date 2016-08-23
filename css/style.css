@@ -188,7 +188,9 @@ h3 {
 }
 
 .items {
-   width: 560px; 
+   width: 560px;
+   font-size: 0px;
+   vertical-align: top;
 }
 
 .item-choice {
@@ -223,6 +225,8 @@ h3 {
     display: inline-block;
     width: 240px;
     margin-bottom: 80px;
+    margin-right: 80px;
+    font-size: 14px;
     
 }
 
