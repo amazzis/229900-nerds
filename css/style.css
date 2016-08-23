@@ -187,6 +187,10 @@ h3 {
     text-align: center;   
 }
 
+.items {
+   width: 560px; 
+}
+
 .item-choice {
     float: left;
     width: 240px;
@@ -197,6 +201,7 @@ h3 {
     width: 640px;
     padding-left: 80px;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 .sorting: {
@@ -215,13 +220,14 @@ h3 {
 }
 
 .item {
-    float:left;
+    display: inline-block;
     width: 240px;
     margin-bottom: 80px;
+    
 }
 
 .item:nth-child(even) {
-    float:right;
+    margin-right: 0px;
 }
 
 .main-catalog {
