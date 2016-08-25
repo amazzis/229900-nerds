@@ -1,4 +1,5 @@
 body {
+    min-width: 900px;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -10,13 +11,22 @@ body {
 h2 {
     font-size: 36px;
     line-height: 36px;
-    text-transform: uppercase;
 }
 
 h3 {
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
+}
+
+a {
+   color: #000000;
+   text-decoration: none; 
+    
+}
+
+header {
+    background: #eeeeee;
 }
 
 .container {
@@ -29,42 +39,73 @@ h3 {
 .logo { 
     float: left;
     width: 140px;
-    margin-top: 25px;
+    margin-top: 27px;
 }
 
 .navigation-main {
       float: left;
       width: 580px;
-      padding-right: 70px;
-      margin-top: 48px;
-      font-size: 14px;
-      line-height: 30px;
-      text-align: right;
-     
+      text-align: right; 
+}
+
+.navigation-main ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
 }
 
 .navigation-main li {
-      display: inline;
-      margin-right: 48px;
+      display: inline-block;
+      vertical-align: top;
       text-transform: uppercase;
+      font-size: 14px;
+      line-height: 30px;
 }
 
-.navigation-main li:last-child {
-      display: inline;
-      margin-right: 0px;
-      text-transform: uppercase;
+.navigation-main a {
+      display: block;
+      vertical-align: top;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-left: 46px;
+}
+
+.navigation-main a:hover {
+    color: #fb565a;
+}
+
+.navigation-main a:active {
+    color: #000000;
+    opacity: 0.4;
 }
 
 .cart {
+      position: relative;
       float: right;
-      width: 90px;
-      margin-top: 62px;
+      width: 94px;
       font-size: 14px;
       line-height: 30px;
+      text-align: right;
       text-transform: uppercase;
 }
 
+.cart a {
+      display: block;
+      vertical-align: top;
+      padding-top: 48px;
+      padding-bottom: 48px;  
 }
+
+.cart a:hover {
+    color: #fb565a;
+}
+
+.cart a:active {
+    color: #000000;
+    opacity: 0.4;
+}
+
 .header-top {
     margin-bottom: 45px; 
 }
@@ -80,6 +121,9 @@ h3 {
     width: 540px; 
 }
 
+.demo-left h2 {
+    text-transform: none;
+}
 .slider-pagination {
     float:right;
 }
@@ -102,15 +146,28 @@ h3 {
     float: left;
     width: 240px;
     margin-right: 80px;
+    text-align: left;
 }
 
 .service:last-child {              /* можно каждому 3 обнулять марджин*/
     margin-right: 0;
 }
 
+.service h3 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.service b {
+    font-size: 15px;
+}
+
 .services-list {
-    padding-bottom: 81px;
+    padding-bottom: 80px;
     margin-bottom: 75px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
 }
 
 .description-left {
@@ -126,22 +183,33 @@ h3 {
 .about-us {
     padding-bottom: 74px;
     margin-bottom: 47px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
 }
 
 .partners {
     width: 0 auto;
-    padding-bottom: 32px;
+    padding-bottom: 33px;
     margin-bottom: 87px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
 }
 
 .partners a {
     display: inline-block;
     vertical-align: middle;
     margin-right: 120px;
+    opacity: 0.3;
 }
 
 .partners a:last-child {
     margin-right: 21px;
+}
+
+.partners a:hover {
+    opacity: 1;
 }
 
 .map {
@@ -156,24 +224,34 @@ h3 {
 
 .map .contacts {
     float: left;
-    width: 229px;
+    width: 250px;
+    min-height: 240px;
     margin-top: 88px;
     padding-left: 21px;
-    padding-top: 32px;
-    padding-bottom: 27px;
+    padding-top: 26px;
+    padding-bottom: 26px;
     background-color: #ffffff;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+
+.contacts h3 {
+    line-height: 30px;
 }
 
 .footer-social {
     float: left;
-    width: 240px;
+    width: 240px; 
     margin-top: 78px;
-    
+    vertical-align: top;
+    text-align: left;
+    font-size: 0;  
 }
 
 .discount {
-    width: 560px;
     float: right;
+    width: 560px; 
+    margin-top: 46px;
 }
 
 .lead {
@@ -185,6 +263,7 @@ h3 {
     font-size: 40px;
     line-height: 45px; /* высота в макете авто. не ясно как узнать*/
     text-align: center;   
+    text-transform: uppercase;
 }
 
 .items {
@@ -244,4 +323,145 @@ h3 {
 
 .pagination li {
     display: inline;
+}
+
+/* ---------------------------------------------------------------- Кнопки -----------------------------------------*/
+.btn {
+    display: inline-block;
+    width: 140px;
+    padding: 10px 10px;
+    margin-top: 30px;
+    vertical-align: top;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: #fb565a;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #cc5251;
+    height: 38px;
+}
+
+.btn:active {
+    background-color: #fb565a;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #8f4242;
+}
+
+.service:nth-child(2) .btn {
+    background-color: #00ca74;
+}
+
+.service:nth-child(2) .btn:hover {
+    background-color: #01a25e;
+}
+
+.service:nth-child(3) .btn {
+    background-color: #efc84a;
+}
+
+.service:nth-child(3) .btn:hover {
+    background-color: #d6ae2c;
+}
+
+.container-demo .btn {
+    width: 240px;
+}
+
+.contacts .btn {
+    width: 204px;
+    right: 25px;
+    bottom: 25px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    margin-right: 27px;
+    background-image: url(../img/decor/sprite-social.png);
+    background-repeat: no-repeat;
+}
+
+.social-btn:last-child {
+    margin-right: 0;
+}
+
+.vk {
+    background-position: -2px -398px;
+}
+
+.vk:hover {
+    background-position: -2px -529px;
+}
+
+.vk:active {
+    background-position: -2px -463px;
+}
+
+.fb {
+    background-position: -2px -2px;
+}
+
+.fb:hover {
+    background-position: -2px -133px;
+}
+
+.fb:active {
+    background-position: -2px -68px;
+}
+
+.inst {
+    background-position: -2px -332px;
+}
+
+.inst:hover{
+    background-position: -2px -266px;
+}
+
+.inst:active {
+    background-position: -2px -200px;
+}
+
+/* ____________________________________________________________________________________________Декор______________________________*/
+
+.decor {
+    background: url(../img/decor/decor.jpg);
+    display: block;
+    width: 240px; 
+    height: 270px;
+}
+
+.decor:hover {
+    background-position: bottom;
+}
+
+.item img {
+    margin-top: 30px;
+}
+
+/* ____________________________________________________________________________________________Чекбоксы, соктировка____________________________________*/
+
+.sorting a {
+    color: #000000;
+    opacity: 0.3;
+    border-bottom: 1px dashed;
+    border-color: #3fb876;
+}
+
+.sorting a:hover {
+    color: #000000;
+    opacity: 1;
+    border-bottom: 1px solid;
+    border-color: #3fb876;
 }
