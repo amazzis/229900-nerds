@@ -15,9 +15,9 @@
           </div>
           <nav class="navigation-main">
             <ul>
-                <li><a href=#>Студия</a></li>
+                <li><a href="index.html" class="onpage">Студия</a></li>
                 <li><a href=#>Клиенты</a></li>
-                <li><a href=#>Магазин</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
                 <li><a href=#>Контакты</a></li>
             </ul>
           </nav>
@@ -26,24 +26,38 @@
           </div>
           </div>
           <div class="container-demo container clearfix">
-              <div class="demo-left">
-                  <h2>Долго, дорого, <br> 
-                      скурпулезно</h2>
-                  <p>Математически выверенный дизайн <br> 
-                   для вашего сайта или мобильного приложения</p>
-                  <a href="#" class="btn">Узнать больше</a>
-                  <div class="slider-pagination">
-                    <ul>
-                       <li><a href="">&#149</a></li>
-                       <li><a href="">&#149</a></li>
-                       <li><a href="">&#149</a></li>
-                    </ul>
+              <input type="radio" id="btn-1" name="toggle" checked>
+              <input type="radio" id="btn-2" name="toggle">
+              <input type="radio" id="btn-3" name="toggle">
+              <div class="slider-controls">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>
+                  <label for="btn-3"></label>
+              </div>
+              <div class="slides">
+                   <div class="slide">
+                        <div class="slide-text">
+                            <div class="slide-title">Долго, дорого,<br>скрупулезно</div>
+                                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                                <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                   </div>
+                   <div class="slide">
+                        <div class="slide-text">
+                            <div class="slide-title">Любите ли вы математику,<br> как любим ее мы?</div>
+                                <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать.</p>
+                                <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                  </div>
+                  <div class="slide">
+                      <div class="slide-text">
+                          <div class="slide-title">Только наркотики,<br> только хардкор!</div>
+                          <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
+                          <a class="btn" href="#">Узнать больше</a>
+                      </div>   
                   </div>
               </div>
-              <div class=slider-pic>
-                  <img src="img/slider-pic1.png" width="338" height="231" alt="picture">
-              </div>
-          </div>
+          </div>               
       </header>
       <main>
           <section class="services-list container clearfix">
@@ -59,14 +73,14 @@
                   <h3>Приложения</h3>
                   <b>Покорите топ-10 приложений <br>
                   в AppStore и Google Play</b>
-                  <a  href="#" class="btn">Заказать</a>
+                  <a  href="#" class="btn green-btn">Заказать</a>
               </article>
               <article class="service">
                   <img src="img/present-works.jpg" width="240" height="124" alt="picture">
                   <h3>Презентации</h3>
                   <b>Вы даже не подозреваете, <br>
                   насколько вы вразумительны</b>
-                  <a class="btn" href="#">Заказать</a>
+                  <a class="btn yellow-btn" href="#">Заказать</a>
               </article>
           </section>
           <section class="about-us container clearfix">
@@ -83,8 +97,7 @@
                   </ul>
               </div>
               <div class="description-rigth">
-                  <img src="img/logo-2.png" alt="Нёрдс">
-                  <p>SINCE 2004</p>
+                  <img src="img/logo-2nd.png" alt="Нёрдс">
                   <h3>Как мы работаем:</h3>
                   <ul>
                       <li>С самоотдачей 146%</li>

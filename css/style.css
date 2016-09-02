@@ -22,7 +22,6 @@ h3 {
 a {
    color: #000000;
    text-decoration: none; 
-    
 }
 
 header {
@@ -66,11 +65,16 @@ header {
 .navigation-main a {
       display: block;
       vertical-align: top;
-      padding-top: 48px;
-      padding-bottom: 48px;
-      padding-left: 46px;
+      padding-top: 54px;
+      margin-left: 46px;
+      margin-bottom: 48px;
 }
 
+.onpage {
+      border-bottom-style: solid;
+      border-width: 2px;
+      border-bottom-color: #fb565a;
+}
 .navigation-main a:hover {
     color: #fb565a;
 }
@@ -93,8 +97,29 @@ header {
 .cart a {
       display: block;
       vertical-align: top;
-      padding-top: 48px;
+      padding-top: 54px;
       padding-bottom: 48px;  
+}
+
+.login::before {
+    content: "";
+    background-image: url(../img/decor/basket.png);
+    display: inline-block;
+    margin-right: 13px;
+    width: 15px;
+    height: 15px;
+    background-position: -2px -2px;
+    opacity: 0.3;
+}
+
+.login:hover::before {
+    background-position: -2px -21px;
+    opacity: 1;
+}
+
+.login:active::before {
+    background-position: -2px -2px;
+    opacity: 0.15;
 }
 
 .cart a:hover {
@@ -106,38 +131,137 @@ header {
     opacity: 0.4;
 }
 
-.header-top {
-    margin-bottom: 45px; 
-}
-
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.demo-left {
-    float: left;
-    width: 540px; 
+.container-demo {
+  position: relative;
+  width: 880px;
+  min-height: 310px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.demo-left h2 {
-    text-transform: none;
-}
-.slider-pagination {
-    float:right;
-}
-.slider-pagination li {
-    text-align: center;
-    display: inline; 
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 310px;
+
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+
+  -webkit-transition: left 0.3s ease;
+     -moz-transition: left 0.3s ease;
+          transition: left 0.3s ease;
 }
 
-.slider-pic {
-    float: right;
-    width:340px;
-    
+.container-demo input[type="radio"] {
+  display: none;
 }
+
+.slider-controls {
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  z-index: 10;
+
+  width: 200px;
+  margin-left: -100px;
+
+  text-align: center;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+
+  vertical-align: top;
+
+  background: #ffffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slide-text {
+  width: 500px;
+  padding: 30px 0;
+}
+
+.slide-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.container-demo p {
+  font-weight: 500;
+  line-height: 22px;
+  color: #283136;
+}
+
+.slide:nth-child(1) {
+  background-image: url("../img/slide-1.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../img/slide-2.png");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../img/slide-3.png");
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  left: 0;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(2),
+#btn-1:checked ~ .slides .slide:nth-child(3) {
+  left: 880px;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(1) {
+  left: -880px;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  left: 0;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(3) {
+  left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(1) {
+  left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(2) {
+  left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  left: 0;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background: #c1c1c1;
+}
+
+
 .main-header {
+    padding-top: 50px;
     padding-bottom: 70px;
     margin-bottom: 80px;
 }
@@ -177,7 +301,33 @@ header {
 
 .description-rigth {
     float: right;
-    width: 240px;
+    width: 240px;   
+}
+
+.description-rigth ul,
+.description-left ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.description-rigth li,
+.description-left li {
+    position: relative;
+	margin-top: 20px;
+	padding-left: 37px;
+    text-align: left;
+}
+
+.description-rigth li::before,
+.description-left li::before {
+    content: "";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	background: #fb565a;
 }
 
 .about-us {
@@ -258,7 +408,6 @@ header {
     width: 660px;
     margin: 0 auto;
     margin-bottom: 43px;
-    padding-top: 30px;
     padding-bottom: 82px;
     font-size: 40px;
     line-height: 45px; /* высота в макете авто. не ясно как узнать*/
@@ -274,6 +423,11 @@ header {
 .item-choice {
     float: left;
     width: 240px;
+    position: relative;
+}
+
+.fltr input {
+    visibility: hidden;
 }
 
 .items-list {
@@ -284,32 +438,74 @@ header {
     text-align: justify;
 }
 
-.sorting: {
-    width: 100%;
+.sorting {
+    width: 560px;
     font-size: 12px;
     line-height: 18px;
 }
 
-.sorting li {
-    display: inline;
-    margin-right: 39px;  /* ??????????????*/
+.sorting ul {
+    list-style: none;
 }
 
-.sorting li:nth-child(5) {
-    margin-right: 0px;
+.sorting li {
+    display: inline-block;
+    vertical-align: top;
 }
+
 
 .item {
+    position: relative;
     display: inline-block;
     width: 240px;
     margin-bottom: 80px;
     margin-right: 80px;
-    font-size: 14px;
-    vertical-align: top;  
+    vertical-align: top;
+    background: url(../img/decor/decor.jpg); 
+    height: 270px;
 }
+
+.item:hover {
+    background-position: bottom;
+}
+
+
+.item img {
+    margin-top: 30px;
+}
+
 
 .item:nth-child(even) {
     margin-right: 0px;
+}
+
+.item-description {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 20px;
+    box-sizing: border-box;
+    padding: 36px 20px 99px;
+    width: 200px;
+    max-height: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #283136;
+    font-size: 14px;
+    line-height: 18px;
+    visibility: hidden;
+    
+}
+
+.item:hover .item-description {
+    visibility: visible;
+    
+}
+
+.item-description h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
 }
 
 .main-catalog {
@@ -323,7 +519,13 @@ header {
 
 .pagination li {
     display: inline;
+    list-style: none;
 }
+
+.item-choice ul {
+    list-style: none;
+}
+
 
 /* ---------------------------------------------------------------- Кнопки -----------------------------------------*/
 .btn {
@@ -348,30 +550,37 @@ header {
 
 .btn:hover {
     background-color: #cc5251;
-    height: 38px;
 }
 
 .btn:active {
-    background-color: #fb565a;
-    border-top-width: 3px;
-    border-top-style: solid;
-    border-top-color: #8f4242;
+    background-color: #b63538;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
 
-.service:nth-child(2) .btn {
+.green-btn {
     background-color: #00ca74;
 }
 
-.service:nth-child(2) .btn:hover {
+.green-btn:hover {
     background-color: #01a25e;
 }
 
-.service:nth-child(3) .btn {
+.green-btn:active {
+    background-color: #009053;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
+}
+
+.yellow-btn {
     background-color: #efc84a;
 }
 
-.service:nth-child(3) .btn:hover {
+.yellow-btn:hover {
     background-color: #d6ae2c;
+}
+
+.yellow-btn:active {
+    background-color: #c09b24;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
 
 .container-demo .btn {
@@ -433,35 +642,125 @@ header {
     background-position: -2px -200px;
 }
 
-/* ____________________________________________________________________________________________Декор______________________________*/
+.pagination .btn {
+    width: 38px;
+    padding: 10px 10px;
+    background-color: #f1f1f1;
+    color: #000000;
+}
 
-.decor {
-    background: url(../img/decor/decor.jpg);
+.pagination .btn:hover {
+    background-color: #e5e5e5;
+}
+
+.pagination .btn:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
+}
+
+.pagination .current {
+    background-color: white;
+    height: 38px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f2f2f2;
+}
+
+.pagination .current:hover {
+    background-color: white;
+    height: 38px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f2f2f2;
+}
+
+.pagination .current:active {
+    background-color: white;
+    height: 38px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f2f2f2;
+    box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+
+
+.item .btn {
+    position: absolute;
+    margin-top: 0;
+    bottom: 30px;
+    right: 30px;
+    font-size: 18px;
+
+}
+
+.item-choice .btn {
     display: block;
-    width: 240px; 
-    height: 270px;
+    width: 156px;
+    margin-top: 57px;
+    background-color: #f1f1f1;
+    color: #000000;
 }
 
-.decor:hover {
-    background-position: bottom;
+.item-choice .btn:hover {
+    background-color: #e5e5e5;
 }
 
-.item img {
-    margin-top: 30px;
+.item-choice .btn:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 rgba(0,0,0,0.15);
 }
+
+.triangle-down {
+    display: block;
+    vertical-align: top;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 6px 0 6px;
+    border-color: #c1c1c1 transparent transparent transparent;
+    margin-right: 7px;
+}
+
+.triangle-up {
+    display: block;
+    vertical-align: top;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 10px 6px;
+    border-color: transparent transparent #c1c1c1 transparent;
+}
+
+.triangle-down:hover {
+    border-color: #b5b5b5 transparent transparent transparent;
+}
+
+.triangle-up:hover {
+    border-color: transparent transparent #b5b5b5 transparent;
+}
+
+.triangle-down:active {
+    border-color: #000000 transparent transparent transparent;
+}
+
+.triangle-up:active {
+    border-color: transparent transparent #000000 transparent;
+}
+
 
 /* ____________________________________________________________________________________________Чекбоксы, соктировка____________________________________*/
 
-.sorting a {
+.sort a {
     color: #000000;
     opacity: 0.3;
     border-bottom: 1px dashed;
     border-color: #3fb876;
 }
 
-.sorting a:hover {
+.sort a:hover {
     color: #000000;
     opacity: 1;
     border-bottom: 1px solid;
     border-color: #3fb876;
 }
+

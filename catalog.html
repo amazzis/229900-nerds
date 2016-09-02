@@ -15,9 +15,9 @@
           </div>
           <nav class="navigation-main">
             <ul>
-                <li><a href=#>Студия</a></li>
+                <li><a href="index.html">Студия</a></li>
                 <li><a href=#>Клиенты</a></li>
-                <li><a href=#>Магазин</a></li>
+                <li><a href="catalog.html" class="onpage">Магазин</a></li>
                 <li><a href=#>Контакты</a></li>
             </ul>
           </nav>
@@ -27,7 +27,7 @@
           </div>
           <div class="lead container">
               <h2>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН <br> 
-                               ГОТОВЫХ МАКЕТОВ</h2>
+                   ГОТОВЫХ МАКЕТОВ</h2>
           </div>
       </header>
       <main>
@@ -42,15 +42,16 @@
                       <p>ДО</p>
                       <input type="number" name="quantity" min="1" max="15000">
                   </fieldset>
-                  <fieldset>
+                  <div class="fltr"><fieldset>
                       <legend>СЕТКА:</legend>
                       <ul>
-                          <li><label><input type="radio" name="answer" value="rad1">Адаптивная</label></li>
-                          <li><label><input type="radio" name="answer" value="rad1">Фиксированная</label></li>
-                          <li><label><input type="radio" name="answer" value="rad1">Резиновая</label></li>
+                          <li><label class="radio"><input type="radio" name="answer" value="rad1">Адаптивная</label></li>
+                          <li><label class="radio"><input type="radio" name="answer" value="rad1">Фиксированная</label></li>
+                          <li><label class="radio"><input type="radio" name="answer" value="rad1">Резиновая</label></li>
                       </ul>
                   </fieldset>
-                  <fieldset>
+                  </div>
+                  <div class="fltr"><fieldset>
                       <legend>ОСОБЕННОСТИ:</legend>
                       <ul>
                           <li><label><input type="checkbox">Слайдер</label></li>
@@ -60,83 +61,86 @@
                           <li><label><input type="checkbox">Корзина</label></li>
                       </ul>
                   </fieldset>
-                  <button class="btn-filter">Показать</button>
+                  </div>
+                  <button class="btn">Показать</button>
               </form>
           </div>
           <div class="items-list">
               <div class="sorting">
-                  <ul>
+                  <ul class="sort">
                       <li>Сортировать:</li>
                       <li><a href="#">по цене</a></li>
                       <li><a href="#">по типу</a></li>
                       <li><a href="#">по функционалу</a></li>
-                      <li><a href="#">&#9660</a></li>
-                      <li><a href="#">&#9650</a></li>
+                  </ul>   
+                  
+                  <ul class="triangle">
+                      <li><a href="#" class="triangle-down"></a></li>
+                      <li><a href="#" class="triangle-up"></a></li>
                   </ul>
               </div>
               <div class="items clearfix">
               <article class="item">
                   <a href="#" class="decor"><img src="img/aviator.jpg" width="240" height="240" alt="aviator"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                       <h3>Aviator</h3>
                       <p>Одностраничный сайт <br>
                       с авторским дизайном </p>
-                      <a class="btn-buy" href="">8000 р.</a>
+                      <a class="btn" href="">8000 р.</a>
                   </div>
               </article>
               <article class="item">
                   <a href="#" class="decor"><img src="img/sunset.jpg" width="240" height="240" alt="sunset"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                       <h3>Sunset</h3>
                       <p>Интернет магазин <br>
                        с личным кабинетом</p>
-                      <a class="btn-buy" href="">10000 р.</a>
+                      <a class="btn" href="">10000 р.</a>
                   </div>
               </article>
               <article class="item">
                   <a href="#" class="decor"><img src="img/forte.jpg" width="240" height="240" alt="forte"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                       <h3>Forte</h3>
                       <p>Сайт-визитка <br>
                         для архитектора </p>
-                      <a class="btn-buy" href="">9000 р.</a>
+                      <a class="btn" href="">9000 р.</a>
                   </div>
               </article>
               <article class="item">
                   <a href="#" class="decor"><img src="img/thai.jpg" width="240" height="240" alt="thai"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                       <h3>Modern Organic Thai</h3>
                       <p>Сайт для ресторана<br>
                       быстрого питания</p>
-                      <a class="btn-buy" href="">12000 р.</a>
+                      <a class="btn" href="">12000 р.</a>
                   </div>
               </article>
               <article class="item">
                   <a href="#" class="decor"><img src="img/avenue.jpg" width="240" height="240" alt="avenue"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                        <h3>Avenue</h3>
                        <p>Сайт фотографа <br>
                         с мощной галереей</p>
-                       <a class="btn-buy" href="">10000 р.</a>
+                       <a class="btn" href="">10000 р.</a>
                       </div>
               </article>
               <article class="item">
                   <a href="#" class="decor"><img src="img/dovetail.jpg" width="240" height="240" alt="dovetail"></a>
-                  <div class="item-decription">
+                  <div class="item-description">
                       <h3>Dovetail</h3>
                       <p>Интернет-магазин<br>
                       с галеерей товаров</p>
-                      <a class="btn-buy" href="">10000 р.</a>
+                      <a class="btn" href="">10000 р.</a>
                   </div>
               </article>
               </div>
               <div class="pagination clearfix">
                   <ul>
-                      <li><a href="#">&laquo;</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">&raquo;</a></li>
+                      <li><a href="#" class="current btn">1</a></li>
+                      <li><a href="#" class="btn">2</a></li>
+                      <li><a href="#" class="btn">3</a></li>
+                      <li><a href="#" class="btn next">Следующая</a></li>
                   </ul>
               </div>
          </div>
@@ -148,7 +152,7 @@
                   <p>191186, Санкт-Петербург, <br>
                   ул. Б. Конюшенная 19/8</p>
                   <a href="tel:+78122757575">+ 7 (812) 275 75 75</a> <br> 
-                  <a class="contact-form" href="#">Напишите нам</a>
+                  <a class="contact-form btn" href="#">Напишите нам</a>
               </div>
               </div>
           </section>
