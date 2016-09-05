@@ -679,7 +679,7 @@ fieldset {
 }
 
 .btn:hover {
-    background-color: #cc5251;
+    background-color: #d6494d; 
 }
 
 .btn:active {
@@ -728,51 +728,41 @@ fieldset {
 
 .social-btn {
     display: inline-block;
+    vertical-align: top;
     width: 62px;
     height: 62px;
     margin-right: 27px;
-    background-image: url(../img/decor/sprite-social.png);
-    background-repeat: no-repeat;
+    font-size: 0;
+	text-decoration: none;
+	border-radius: 50%;
+	background: #e1e1e1 url("../img/decor/sprite.png") no-repeat center;
 }
 
 .social-btn:last-child {
     margin-right: 0;
 }
 
+.social-btn:hover {
+    background-color: #fb565a;
+}
+
+.social-btn:active {
+	background-color: #b63538;
+	-webkit-box-shadow: inset 0 3px 0 0 #9b2d30;
+	-moz-box-shadow: inset 0 3px 0 0 #9b2d30;
+	box-shadow: inset 0 3px 0 0 #9b2d30;
+}
+
 .vk {
-    background-position: -2px -398px;
-}
-
-.vk:hover {
-    background-position: -2px -529px;
-}
-
-.vk:active {
-    background-position: -2px -463px;
+    background-position: 19px -956px;
 }
 
 .fb {
-    background-position: -2px -2px;
-}
-
-.fb:hover {
-    background-position: -2px -133px;
-}
-
-.fb:active {
-    background-position: -2px -68px;
+    background-position: 25px -680px;
 }
 
 .inst {
-    background-position: -2px -332px;
-}
-
-.inst:hover{
-    background-position: -2px -266px;
-}
-
-.inst:active {
-    background-position: -2px -200px;
+    background-position: 22px -823px;
 }
 
 .pagination .btn {
@@ -818,7 +808,7 @@ fieldset {
 }
 
 .pagination .btn.next {
-    width: auto;
+    width: 141px;
 }
 
 .item .btn {
@@ -859,32 +849,33 @@ fieldset {
     margin-right: 7px;
 }
 
-.triangle-up {
-    display: block;
-    vertical-align: top;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 6px 10px 6px;
-    border-color: transparent transparent #c1c1c1 transparent;
+.icon-down-dir::before { 
+    content: "\25bc"; 
+    color: #c1c1c1;
+} 
+.icon-up-dir::before { 
+    content: "\25b2"; 
+    color: #c1c1c1;
+} 
+
+.icon-down-dir:hover::before,
+.icon-up-dir:hover::before {
+    color: #b5b5b5;
 }
 
-.triangle-down:hover {
-    border-color: #b5b5b5 transparent transparent transparent;
+.icon-down-dir:active::before,
+.icon-up-dir:active::before {
+    color: #000000;
 }
 
-.triangle-up:hover {
-    border-color: transparent transparent #b5b5b5 transparent;
+.triangle .active:before {
+    color: #00ca74;
 }
 
-.triangle-down:active {
-    border-color: #000000 transparent transparent transparent;
+.sort .active {
+    border-bottom: none;
+    opacity: 1;
 }
-
-.triangle-up:active {
-    border-color: transparent transparent #000000 transparent;
-}
-
 
 /* Чекбоксы, соктировка*/
 .range-filter {
@@ -1009,7 +1000,7 @@ fieldset {
     opacity: 0.3;
 }
 
-.radio:hover ~ .radio-control {
+.radio:hover .radio-control::before {
   color: #b5b5b5;
 }
 
@@ -1040,9 +1031,8 @@ fieldset {
     opacity: 0.3;
 }
 
-.check:hover ~ .checkbox-control {
-    color: #b5b5b5;
-    
+.check:hover .checkbox-control::before {
+    color: #b5b5b5; 
 }
 
 
