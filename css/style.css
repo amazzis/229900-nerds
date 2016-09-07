@@ -435,7 +435,6 @@ header {
     float: left;
     width: 240px; 
     margin-top: 75px;
-    margin-bottom: 78px;
     vertical-align: top;
     text-align: left;
     font-size: 0;  
@@ -454,7 +453,6 @@ header {
 
 .discount p {
     margin-top: 0;
-    margin-bottom: 75px;
 }
 
 .lead h2 {
@@ -673,6 +671,7 @@ fieldset {
 }
 
 
+
 /* ------------------------ Кнопки ----------------------------*/
 .btn {
     display: inline-block;
@@ -881,6 +880,10 @@ fieldset {
 .sort .active {
     border-bottom: none;
     opacity: 1;
+}
+
+.main-footer {
+    padding-bottom: 55px; 
 }
 
 /* Чекбоксы, соктировка*/
