@@ -959,6 +959,8 @@ fieldset {
 }
 
 .price-controls input {
+    display: inline-block;
+    vertical-align: middle;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     width: 60px;
@@ -967,7 +969,7 @@ fieldset {
     text-align: center;
     color: #283136;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     outline: none;
     background: #f1f1f1;
 }
