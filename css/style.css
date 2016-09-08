@@ -410,9 +410,9 @@ header {
     float: left;
     width: 250px;
     min-height: 240px;
-    margin-top: 88px;
+    margin-top: 85px;
     padding-left: 21px;
-    padding-top: 28px;
+    padding-top: 25px;
     padding-bottom: 26px;
     background-color: #ffffff;
     line-height: 20px;
@@ -442,12 +442,12 @@ header {
 
 .discount {
     float: right;
-    width: 560px; 
+    width: 561px; 
     margin-top: 49px;
 }
 
 .discount h2 {
-    margin-top:25px;
+    margin-top: 22px;
     margin-bottom: 10px;
 }
 
@@ -646,7 +646,7 @@ fieldset {
 }
 
 .main-catalog {
-    margin-bottom: 77px;
+    margin-bottom: 83px;
 }
 
 .pagination {
